@@ -1,0 +1,10 @@
+# build files
+apps/frontend/.next/
+# dependencies
+apps/frontend/node_modules/
+# debug
+apps/frontend/npm-debug.log*
+apps/frontend/yarn-debug.log*
+apps/frontend/yarn-error.log*
+# local environment
+.env

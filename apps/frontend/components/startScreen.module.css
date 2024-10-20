@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  font-size: large;
+}
+
+.menuRow,
+.menuChoice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menuHeader {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  /* font-weight: bold; */
+}
+
+.menuHeader::after {
+  content: ":";
+}
+
+.menuChoice > div:not(:last-child):after {
+  content: "/";
+  color: black;
+  cursor: default;
+}
+
+.startButton {
+  display: flex;
+  justify-content: center;
+  /* font-weight: bold; */
+}
+
+.clickable {
+  color: black;
+  transition: 0.3s;
+}
+
+.clickable:hover {
+  cursor: pointer;
+  color: dimgray;
+}
+
+.clickable:active {
+  color: black;
+}
+
+.activeChoice,
+.activeChoice:hover {
+  transition: 0.1s;
+  color: darkorange;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.horizontalSep {
+  width: 100%;
+  background-color: grey;
+  height: 1px;
+  border-radius: 4px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.paddingText {
+  height: 80px;
+  width: 100%;
+}
+
+.explanationText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: dimgray;
+  gap: 8px;
+}
+
+.explanationText b {
+  color: darkorange;
+  white-space: nowrap;
+}
+
+.explanationText u {
+  text-decoration-color: darkorange;
+}
+
+.codeText {
+  color: black;
+  background-color: lightgray;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: large;
+}
+
+@media only screen and (max-width: 600px) {
+  .menuContainer {
+    width: 100%;
+    font-size: medium;
+  }
+
+  .container {
+    justify-content: space-evenly;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .paddingText {
+    display: none;
+  }
+
+  .explanationText {
+    font-size: small;
+    line-height: 1.3;
+    gap: 4px;
+  }
+
+  .explanationText > div {
+    width: 100%;
+  }
+
+  .codeText {
+    font-size: medium;
+  }
+}

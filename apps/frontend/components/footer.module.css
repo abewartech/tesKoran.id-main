@@ -1,0 +1,72 @@
+.container {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: opacity 0.1s;
+  gap: 8px;
+  padding: 0.5rem 0;
+}
+
+.group {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.clickable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 4px;
+  transition: 0.1s;
+  user-select: none;
+  padding: 0 0.5rem;
+  color: dimgray;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  text-decoration: none;
+}
+
+.disabled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  user-select: none;
+  color: dimgray;
+  padding: 0 0.5rem;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .clickable:hover {
+    color: black;
+  }
+
+  .clickable:active {
+    color: dimgray;
+  }
+
+  .group {
+    width: auto;
+  }
+}
